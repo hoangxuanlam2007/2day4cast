@@ -81,16 +81,16 @@ export default function AirPollution({
       <CardFooter>
         <p>
           {airQuality.main.aqi < 50
-            ? "Air quality is good."
+            ? "Chất lượng không khí tốt."
             : airQuality.main.aqi < 100
-            ? "Air quality is moderate."
+            ? "Chất lượng không khí ở mức vừa phải."
             : airQuality.main.aqi < 150
-            ? "Air quality is unhealthy for sensitive groups."
+            ? "Chất lượng không khí không tốt cho sức khỏe cho những người có tiền sử bệnh lý về đường hô hấp."
             : airQuality.main.aqi < 200
-            ? "Air quality is unhealthy."
+            ? "Chất lượng không khí không tốt."
             : airQuality.main.aqi < 300
-            ? "Air quality is very unhealthy."
-            : "Air quality is hazardous."}
+            ? "Chất lượng không khí độc hại."
+            : "Chất lượng không khí nguy hiểm."}
         </p>
       </CardFooter>
     </Card>

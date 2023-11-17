@@ -15,7 +15,7 @@ export default function Navigation() {
           passHref
           prefetch={false}
           aria-label="Support project"
-          href={"https://github.com/DariusLukasukas/nextjs-weather-app"}
+          href={" "}
           className="shrink-0"
         >
           <Button variant={"default"} className="h-9">
