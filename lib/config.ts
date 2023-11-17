@@ -1,43 +1,43 @@
 import { Location } from "./types"
 
 export const DEFAULT_LOCATION: Location = {
-  city: "Copenhagen",
+  city: "Hà Nội",
   coord: {
-    lat: "55.6760968",
-    lon: "12.5683371",
+    lat: "21.0245",
+    lon: "105.8412",
   },
 }
 
 export const DEFAULT_SUGGESTIONS = [
   {
-    description: "London, United Kingdom",
+    description: "London, Vương quốc Anh",
   },
   {
-    description: "Paris, France",
+    description: "Paris, Pháp",
   },
   {
-    description: "Amsterdam, Netherlands",
+    description: "Amsterdam, Hà Lan",
   },
   {
     description: "Dublin, Ireland",
   },
   {
-    description: "Lisbon, Portugal",
+    description: "Lisbon, Bồ Đào Nha",
   },
 ]
 
 export const OTHER_LARGE_CITIES = [
   {
     city: "New York",
-    country: "United States",
+    country: "Hoa kỳ",
     coord: {
       lat: 40.7127753,
       lon: -74.0059728,
     },
   },
   {
-    city: "Shanghai",
-    country: "China",
+    city: "Thượng Hải",
+    country: "Trung Quốc",
     coord: {
       lat: 31.2222226,
       lon: 121.458069,
@@ -45,7 +45,7 @@ export const OTHER_LARGE_CITIES = [
   },
   {
     city: "Tokyo",
-    country: "Japan",
+    country: "Nhật Bản",
     coord: {
       lat: 35.6764225,
       lon: 139.650027,
@@ -53,7 +53,7 @@ export const OTHER_LARGE_CITIES = [
   },
   {
     city: "Sydney",
-    country: "Australia",
+    country: "Úc",
     coord: {
       lat: -33.8688197,
       lon: 151.2092955,

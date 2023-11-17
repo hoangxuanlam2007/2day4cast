@@ -9,7 +9,7 @@ import {
 import { Progress } from "../ui/progress"
 import AirPollution from "./AirPollution"
 import Compass from "../ui/compass"
-import { formatSunTimeWithAMPM } from "@/lib/dateUtils"
+import { formatSunTime } from "@/lib/dateUtils"
 
 interface WeatherWidgetsProps {
   data: HourlyForecastData
@@ -62,14 +62,14 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            Sunset
+            Hoàng hôn
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{formatSunTimeWithAMPM(city.sunset, city.timezone)}</p>
+          <p>{formatSunTime(city.sunset, city.timezone)}</p>
         </CardContent>
         <CardFooter>
-          <p>Sunrise: {formatSunTimeWithAMPM(city.sunrise, city.timezone)}</p>
+          <p>Bình minh: {formatSunTime(city.sunrise, city.timezone)}</p>
         </CardFooter>
       </Card>
       <Card className="order-4 h-48 xl:order-3">
@@ -106,7 +106,7 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            Wind
+            Gió
           </CardTitle>
         </CardHeader>
         <CardContent className="flex justify-center p-0">
@@ -137,7 +137,7 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            UV Index
+            Chỉ số tia UV
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -145,22 +145,22 @@ export default function WeatherWidgets({
             {Math.round(uvIndexForToday)}
             <br></br>
             {uvIndexForToday <= 2
-              ? "Low"
+              ? "Thấp"
               : uvIndexForToday <= 5
-              ? "Moderate"
+              ? "Trung bình"
               : uvIndexForToday <= 7
-              ? "High"
-              : "Very High"}
+              ? "Cao"
+              : "Rất cao"}
           </p>
           <Progress aria-label="UV Index" value={uvIndexForToday * 10} />
         </CardContent>
         <CardFooter>
           <p>
             {uvIndexForToday <= 2
-              ? "No protection needed."
+              ? "Không cần phương pháp bảo vệ."
               : uvIndexForToday <= 5
-              ? "Wear sunscreen."
-              : "Take precautions."}
+              ? "Nên dùng phương pháp bảo vệ."
+              : "Cần đề phòng."}
           </p>
         </CardFooter>
       </Card>
@@ -236,23 +236,23 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            Precipitation
+            Lượng mưa
           </CardTitle>
         </CardHeader>
         <CardContent>
           <p>
-            {data.rain?.["1h"] || 0}mm <br></br>in the last 3h
+            {data.rain?.["1h"] || 0}mm <br></br>trong 3 tiếng gần nhất
           </p>
         </CardContent>
         <CardFooter>
           <p>
             {data.rain?.["1h"] !== undefined
               ? data.rain["1h"] <= 0.2
-                ? "Light rain or drizzle. An umbrella may come in handy."
+                ? "Mưa nhỏ hoặc mưa phùn. Một chiếc ô có thể có ích."
                 : data.rain["1h"] <= 2.5
-                ? "Moderate rain."
-                : "Heavy rain."
-              : "Conditions are dry."}
+                ? "Mưa vừa."
+                : "Mưa to."
+              : "Điều kiện khô ráo."}
           </p>
         </CardFooter>
       </Card>
@@ -273,7 +273,7 @@ export default function WeatherWidgets({
                 <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
               </svg>
             </i>
-            Feels like
+            Cảm giác như
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -282,10 +282,10 @@ export default function WeatherWidgets({
         <CardFooter>
           <p>
             {data.main.feels_like < data.main.temp
-              ? "Feels colder than the actual temperature."
+              ? "Lạnh hơn nhiệt độ thực tế."
               : data.main.feels_like > data.main.temp
-              ? "Feels warmer than the actual temperature."
-              : "Feels like the actual temperature."}
+              ? "Ấm/nóng hơn nhiệt độ thực tế."
+              : "Đúng với nhiệt độ thực tế."}
           </p>
         </CardFooter>
       </Card>
@@ -306,19 +306,19 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            Humidity
+            Độ ẩm
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>74&deg;</p>
+          <p>{data.main.humidity}&deg;</p>
         </CardContent>
         <CardFooter>
           <p>
             {data.main.humidity < 40
-              ? "Low humidity. It might feel dry."
+              ? "Độ ẩm thấp. Có thể cảm thấy khô ráo."
               : data.main.humidity < 70
-              ? "Moderate humidity. Comfortable conditions."
-              : "High humidity. It might feel humid and uncomfortable."}
+              ? "Độ ẩm vừa phải. Điều kiện môi trường thoải mái."
+              : "Độ ẩm cao. Có thể cảm thấy ẩm ướt và khó chịu."}
           </p>
         </CardFooter>
       </Card>
@@ -343,7 +343,7 @@ export default function WeatherWidgets({
                 />
               </svg>
             </i>
-            Visibility
+            Tầm nhìn xa
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -352,10 +352,10 @@ export default function WeatherWidgets({
         <CardFooter>
           <p>
             {data.visibility >= 10
-              ? "It's perfectly clear right now."
+              ? "Tầm nhìn rõ ràng"
               : data.visibility >= 5
-              ? "Good visibility."
-              : "Poor visibility. Exercise caution while driving or moving around."}
+              ? "Tầm nhìn tốt"
+              : "Tầm nhìn kém. Hãy thận trọng khi tham gia giao thông."}
           </p>
         </CardFooter>
       </Card>
@@ -377,7 +377,7 @@ export default function WeatherWidgets({
                 <path d="M3.34 19a10 10 0 1 1 17.32 0" />
               </svg>
             </i>
-            Pressure
+            Áp suất khí quyển
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -385,11 +385,11 @@ export default function WeatherWidgets({
         </CardContent>
         <CardFooter>
           <p>
-            {data.main.pressure < 1000
-              ? "Low pressure. Expect changes in the weather."
+          {data.main.pressure < 1000
+              ? "Áp suất thấp. Có khả năng thay đổi thời tiết."
               : data.main.pressure >= 1000 && data.main.pressure <= 1010
-              ? "Normal pressure. Typical weather conditions."
-              : "High pressure. Expect stable and clear weather."}
+              ? "Áp suất trung bình. Điều kiện thời tiết đặc trưng."
+              : "Áp suất cao. Thời tiết ổn định."}
           </p>
         </CardFooter>
       </Card>

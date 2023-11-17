@@ -72,7 +72,7 @@ export default function AirPollution({
               />
             </svg>
           </i>
-          Air pollution
+          Chất lượng không khí
         </CardTitle>
       </CardHeader>
       <CardContent className="my-auto">

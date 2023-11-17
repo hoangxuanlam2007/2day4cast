@@ -415,22 +415,22 @@ export default function Compass({ speed, deg }: CompassProps) {
             >
               <text transform="translate(60 60)">
                 <tspan x="92.501" y={33}>
-                  N
+                  B
                 </tspan>
               </text>
               <text transform="translate(60 60)">
                 <tspan x="178.494" y={118}>
-                  E
+                  Đ
                 </tspan>
               </text>
               <text transform="translate(60 60)">
                 <tspan x="93.494" y={203}>
-                  S
+                  N
                 </tspan>
               </text>
               <text transform="translate(60 60)">
                 <tspan x="3.511" y={118}>
-                  W
+                  T
                 </tspan>
               </text>
             </g>

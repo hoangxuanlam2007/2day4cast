@@ -41,12 +41,12 @@ export default function Map() {
 
   const weatherTiles = useMemo(() => {
     return [
-      { label: "Temperature (°C)", code: "TA2" },
-      { label: "Precipitation Intensity (mm/s)", code: "PR0" },
-      { label: "Wind Speed and Direction (m/s)", code: "WND" },
-      { label: "Relative Humidity (%)", code: "HRD0" },
-      { label: "Cloudiness (%)", code: "CL" },
-      { label: "Atmospheric Pressure (hPa)", code: "APM" },
+      { label: "Nhiệt độ (°C)", code: "TA2" },
+      { label: "Lượng mưa (mm/s)", code: "PR0" },
+      { label: "Hướng và tốc độ gió (m/s)", code: "WND" },
+      { label: "Độ ẩm không khí (%)", code: "HRD0" },
+      { label: "Mây mù (%)", code: "CL" },
+      { label: "Áp suất khí quyển (hPa)", code: "APM" },
     ]
   }, [])
 
@@ -114,7 +114,7 @@ export default function Map() {
           id="weatherSource"
           type="raster"
           tiles={[
-            `https://maps.openweathermap.org/maps/2.0/weather/${MapCode}/{z}/{x}/{y}?appid=${OPENWEATHERMAP_TOKEN}`,
+            `https://maps.openweathermap.org/maps/2.0/weather/${MapCode}/{z}/{x}/{y}?appid=${OPENWEATHERMAP_TOKEN}&lang=vi`,
           ]}
           tileSize={256}
         >

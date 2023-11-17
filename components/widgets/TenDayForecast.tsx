@@ -102,7 +102,7 @@ export default function TenDayForecast({ data }: TenDayForecastProps) {
                 />
               </svg>
             </i>
-            10-Day Forecast
+            Dự báo thời tiết 10 ngày liên tiếp
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-base font-normal md:mb-1">
@@ -111,7 +111,25 @@ export default function TenDayForecast({ data }: TenDayForecastProps) {
               <div className="flex w-full flex-row items-center justify-between gap-2 last:mb-0">
                 <p className="min-w-[3rem] font-medium">
                   {i === 0
-                    ? "Today"
+                    ? "Hôm nay"
+                      : i === 1
+                        ? "Thứ bảy"
+                          : i === 2
+                            ? "Chủ nhật"
+                              : i === 3
+                                ? "Thứ hai"
+                                  : i === 4
+                                    ? "Thứ ba"
+                                      : i === 5
+                                          ? "Thứ tư"
+                                            : i === 6
+                                              ? "Thứ năm"
+                                                : i === 7
+                                                  ? "Thứ sáu"
+                                                    : i === 8
+                                                      ? "Thứ bảy"
+                                                        : i === 9
+                                                          ? "Chủ nhật"
                     : convertToDate(data.city.timezone, item.dt, "short")}
                 </p>
                 <IconComponent

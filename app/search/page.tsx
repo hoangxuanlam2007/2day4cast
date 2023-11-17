@@ -27,8 +27,8 @@ export async function generateMetadata({
   const data = await fetch(url).then((res) => res.json())
 
   return {
-    title: `${data.city.name} - Weather Forecast`,
-    description: `${data.city.name} weather forecast with current conditions, wind, air quality, and what to expect for the next 3 days.`,
+    title: `${data.city.name} - Dự báo thời tiết`,
+    description: `${data.city.name} Dự báo thời tiết với đầy đủ thông số khí tượng học.`,
   }
 }
 

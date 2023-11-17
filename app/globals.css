@@ -91,3 +91,7 @@ body[style] {
 canvas {
   outline: none;
 }
+
+.weather-description::first-letter {
+  text-transform: capitalize;
+}

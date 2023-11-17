@@ -3,7 +3,7 @@ import "./globals.css"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
 import { NextThemesProvider } from "@/components/providers/NextThemesProvider"
-import { CodeIcon, HeartIcon } from "@radix-ui/react-icons"
+import { HeartIcon } from "@radix-ui/react-icons"
 import Navigation from "@/components/Navigation"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -33,10 +33,10 @@ export default function RootLayout({
               className="group flex items-center justify-center gap-1 text-neutral-400 dark:text-neutral-600"
               aria-hidden={true}
             >
-              <CodeIcon className="h-5 w-5" />
+              <span>Hand-crafted</span>
               <span>with</span>
-              <HeartIcon className="h-4 w-4 group-hover:text-red-500" />
-              <span>in Denmark</span>
+              <HeartIcon className="h-4 w-4 text-red-500" />
+              <span>by <a className="hover:text-blue-700 hover:underline" href="https://github.com/hoangxuanlam2007" target="_blank" rel="noreferrer">Xuân Lâm</a></span>
             </div>
           </footer>
         </NextThemesProvider>

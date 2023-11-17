@@ -14,13 +14,13 @@ export default function Navigation() {
         <Link
           passHref
           prefetch={false}
-          aria-label="Support project"
+          aria-label="Support my project"
           href={" "}
           className="shrink-0"
         >
           <Button variant={"default"} className="h-9">
             <GitHubLogoIcon className="h-4 w-4 md:mr-1" />
-            <span className="hidden md:block">Support Project</span>
+            <span className="hidden md:block">Ủng hộ dự án của mình</span>
           </Button>
         </Link>
       </div>

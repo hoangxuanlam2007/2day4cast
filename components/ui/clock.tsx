@@ -26,10 +26,10 @@ export default function Clock({ initial, timezone }: ClockProps) {
 
   return (
     <div className="tabular-nums">
-      {time.toLocaleTimeString("en-US", {
+      {time.toLocaleTimeString("vi-VN", {
         timeZone: "UTC",
-        hour12: true,
-        hour: "numeric",
+        hour12: false,
+        hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
       })}

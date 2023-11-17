@@ -12,6 +12,14 @@ interface CurrentWeatherProps {
 export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
   const initial = new Date()
 
+  // const weatherMainMapping: { [key: string]: string } = {
+  //   'Clear': 'Quang đãng',
+  //   'Clouds': 'Nhiều mây',
+  //   'Rain': 'Mưa',
+  //   'Thunderstorm': 'Bão',
+  //   // Add more mappings as needed
+  // };
+
   return (
     <Card className="relative flex h-fit w-full shrink-0 flex-col justify-between overflow-hidden md:h-[25rem]">
       <div className="absolute " />
@@ -53,10 +61,10 @@ export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
           x={data.sys.pod}
           className="h-9 w-9"
         />
-        <div className="font-semibold">{data.weather[0].main}</div>
+        <div className="font-semibold weather-description">{data.weather[0].description}</div>
         <div className="flex gap-2 dark:text-neutral-500">
-          <span>H: {Math.round(data.main.temp_max)}&deg;</span>
-          <span>L: {Math.round(data.main.temp_min)}&deg;</span>
+          <span>Tối đa: {Math.round(data.main.temp_max)}&deg;</span>
+          <span>Thấp nhất: {Math.round(data.main.temp_min)}&deg;</span>
         </div>
       </div>
     </Card>
