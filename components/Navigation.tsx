@@ -14,8 +14,10 @@ export default function Navigation() {
         <Link
           passHref
           prefetch={false}
-          aria-label="Support my project"
-          href={" "}
+          aria-label="Xin 1 sao >.<"
+          href={"https://github.com/hoangxuanlam2007/2day4cast"}
+          target="_blank"
+          rel="noreferrer"
           className="shrink-0"
         >
           <Button variant={"default"} className="h-9">

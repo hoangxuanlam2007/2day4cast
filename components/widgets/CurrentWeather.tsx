@@ -12,14 +12,6 @@ interface CurrentWeatherProps {
 export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
   const initial = new Date()
 
-  // const weatherMainMapping: { [key: string]: string } = {
-  //   'Clear': 'Quang đãng',
-  //   'Clouds': 'Nhiều mây',
-  //   'Rain': 'Mưa',
-  //   'Thunderstorm': 'Bão',
-  //   // Add more mappings as needed
-  // };
-
   return (
     <Card className="relative flex h-fit w-full shrink-0 flex-col justify-between overflow-hidden md:h-[25rem]">
       <div className="absolute " />

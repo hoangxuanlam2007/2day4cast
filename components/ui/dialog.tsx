@@ -48,7 +48,7 @@ const DialogContent = React.forwardRef<
         <kbd className="pointer-events-none flex h-6 select-none items-center justify-center rounded-md border bg-transparent px-1.5 py-1 font-mono font-medium tracking-tight text-muted-foreground opacity-100">
           <span className="text-xs">Esc</span>
         </kbd>
-        <span className="sr-only">Close</span>
+        <span className="sr-only">Đóng</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>

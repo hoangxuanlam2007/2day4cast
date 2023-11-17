@@ -19,8 +19,8 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
-  title: `${DEFAULT_LOCATION.city} - Weather Forecast`,
-  description: `${DEFAULT_LOCATION.city} weather forecast with current conditions, wind, air quality, and what to expect for the next 3 days.`,
+  title: `${DEFAULT_LOCATION.city} | 2day4cast`,
+  description: `${DEFAULT_LOCATION.city} Web App dự báo thời tiết bao gồm đầy đủ thông tin về khí tượng học | Hand-crafted with ❤️ by Xuân Lâm`,
 }
 
 export default async function Home() {

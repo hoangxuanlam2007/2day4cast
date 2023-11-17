@@ -241,7 +241,7 @@ export default function WeatherWidgets({
         </CardHeader>
         <CardContent>
           <p>
-            {data.rain?.["1h"] || 0}mm <br></br>trong 3 tiếng gần nhất
+            {data.rain?.["1h"] || 0}mm <br></br>trong 3h gần nhất
           </p>
         </CardContent>
         <CardFooter>
@@ -389,7 +389,7 @@ export default function WeatherWidgets({
               ? "Áp suất thấp. Có khả năng thay đổi thời tiết."
               : data.main.pressure >= 1000 && data.main.pressure <= 1010
               ? "Áp suất trung bình. Điều kiện thời tiết đặc trưng."
-              : "Áp suất cao. Thời tiết ổn định."}
+              : "Áp suất cao. Điều kiện thời tiết ổn định."}
           </p>
         </CardFooter>
       </Card>

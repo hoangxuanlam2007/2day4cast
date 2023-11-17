@@ -3,7 +3,7 @@ import "./globals.css"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
 import { NextThemesProvider } from "@/components/providers/NextThemesProvider"
-import { HeartIcon } from "@radix-ui/react-icons"
+import { HeartFilledIcon } from "@radix-ui/react-icons"
 import Navigation from "@/components/Navigation"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -35,7 +35,7 @@ export default function RootLayout({
             >
               <span>Hand-crafted</span>
               <span>with</span>
-              <HeartIcon className="h-4 w-4 text-red-500" />
+              <HeartFilledIcon className="h-4 w-4 text-red-500" />
               <span>by <a className="hover:text-blue-700 hover:underline" href="https://github.com/hoangxuanlam2007" target="_blank" rel="noreferrer">Xuân Lâm</a></span>
             </div>
           </footer>

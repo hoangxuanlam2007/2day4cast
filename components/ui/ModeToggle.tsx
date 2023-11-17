@@ -37,7 +37,7 @@ export function ModeToggle() {
           Giao diện tối
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          Giao diện hệ thống
+          Theo hệ thống
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

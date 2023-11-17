@@ -30,8 +30,8 @@ export default function HourlyForecast({ data }: HourlyForecastProps) {
       >
         {data.slice(0, 12).map((item: HourlyForecastData, i) => (
           <div key={item.dt} className="flex h-full flex-col justify-between">
-            <div className="flex justify-center text-sm text-neutral-600 dark:text-neutral-400">
-              {i === 0 ? "Bây giờ" : extractHoursFromDate(item.dt) + " h"}
+            <div className="flex justify-center text-sm text-neutral-600 dark:text-neutral-400 whitespace-nowrap">
+              {i === 0 ? "Bây giờ" : extractHoursFromDate(item.dt) + "h"}
             </div>
             <div className="flex h-full items-center justify-center">
               <IconComponent

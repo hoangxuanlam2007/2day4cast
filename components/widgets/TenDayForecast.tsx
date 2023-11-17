@@ -102,14 +102,14 @@ export default function TenDayForecast({ data }: TenDayForecastProps) {
                 />
               </svg>
             </i>
-            Dự báo thời tiết 10 ngày liên tiếp
+            Dự báo thời tiết trong vòng 10 ngày
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-base font-normal md:mb-1">
           {data.list.map((item: ForecastData, i) => (
             <div key={item.dt}>
               <div className="flex w-full flex-row items-center justify-between gap-2 last:mb-0">
-                <p className="min-w-[3rem] font-medium">
+                <p className="min-w-[3rem] text-sm/[16px] font-bold">
                   {i === 0
                     ? "Hôm nay"
                       : i === 1
