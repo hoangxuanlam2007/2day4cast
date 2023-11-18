@@ -60,12 +60,12 @@ export default function Map() {
   const [viewport, setViewport] = useState({
     latitude: lat ? Number(lat) : Number(defaultLat),
     longitude: lon ? Number(lon) : Number(defaultLon),
-    zoom: 7,
+    zoom: 10,
     pitch: 60,
     bearing: -60,
   })
 
-  const [MapCode, setMapCode] = useState("PR0")
+  const [MapCode, setMapCode] = useState("TA2")
 
   useEffect(() => {
     setViewport((prevViewport) => ({
