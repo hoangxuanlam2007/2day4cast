@@ -26,13 +26,19 @@ export default function Clock({ initial, timezone }: ClockProps) {
 
   return (
     <div className="tabular-nums">
-      {time.toLocaleTimeString("vi-VN", {
-        timeZone: "UTC",
-        hour12: false,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      })}
+      {(() => {
+        const formattedTime = time.toLocaleTimeString("vi-VN", {
+          timeZone: "UTC",
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+  
+        const hour = parseInt(formattedTime.split(":")[0], 10);
+  
+        return `${formattedTime} ${hour <= 13 ? 'AM' : 'PM'}`;
+      })()}
     </div>
-  )
+  );
 }

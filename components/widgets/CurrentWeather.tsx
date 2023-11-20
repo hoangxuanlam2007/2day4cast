@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { City, HourlyForecastData } from "@/lib/types"
 import Clock from "../ui/clock"
-import { convertToDate } from "@/lib/dateUtils"
+import { convertToDate, capitalizeFirstLetter } from "@/lib/dateUtils"
 import IconComponent from "../ui/icon-component"
 
 interface CurrentWeatherProps {
@@ -11,10 +11,6 @@ interface CurrentWeatherProps {
 
 export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
   const initial = new Date()
-
-  const capitalizeFirstLetter = (str: string) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
 
   return (
     <Card className="relative flex h-fit w-full shrink-0 flex-col justify-between overflow-hidden md:h-[25rem]">
@@ -26,7 +22,11 @@ export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
         </div>
         <div className="text-md mt-2 flex font-bold">
           <span>{city.name}</span>
-          <i>
+          <i
+            style={{
+              'marginLeft': '3px'
+            }}
+          >
             <svg
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
