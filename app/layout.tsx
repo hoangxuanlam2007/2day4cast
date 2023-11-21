@@ -40,10 +40,10 @@ export default function RootLayout({
             </div>
           </footer>
         </NextThemesProvider>
-        <Script
+        {/* <Script
           strategy={"beforeInteractive"}
           src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places&callback=Function.prototype`}
-        />
+        /> */}
         <Analytics />
       </body>
     </html>
