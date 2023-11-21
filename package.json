@@ -1,6 +1,6 @@
 {
-  "name": "weather-app-next",
-  "version": "0.1.0",
+  "name": "2day4cast",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

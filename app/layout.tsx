@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <meta property="og:title" content="2day4cast" />
+      <meta property="og:sitename" content="2day4cast" />
+      <meta property="og:author" content="Hoàng Xuân Lâm" />
       <body
         className={`${inter.className}, container mx-auto flex min-h-screen flex-col px-[1rem] antialiased selection:bg-black selection:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black md:px-[2rem]`}
       >
