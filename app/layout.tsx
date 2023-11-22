@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
-import Script from "next/script"
-import { Analytics } from "@vercel/analytics/react"
+// import Script from "next/script"
+// import { Analytics } from "@vercel/analytics/react"
 import { NextThemesProvider } from "@/components/providers/NextThemesProvider"
 import { HeartFilledIcon } from "@radix-ui/react-icons"
 import Navigation from "@/components/Navigation"
@@ -47,7 +47,7 @@ export default function RootLayout({
           strategy={"beforeInteractive"}
           src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places&callback=Function.prototype`}
         /> */}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )
