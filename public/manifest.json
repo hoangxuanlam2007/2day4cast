@@ -3,11 +3,13 @@
     "name": "2day4cast",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#68B5E9",
-    "background_color": "#000000",
+    "theme_color": {
+      "dark": "#000000",
+      "light": "#ffffff"
+    },
     "icons": [
       {
-        "src": "favicon.ico",
+        "src": "favicon_app.ico",
         "sizes": "64x64 32x32 24x24 16x16",
         "type": "image/x-icon"
       }

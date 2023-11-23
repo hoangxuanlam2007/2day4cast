@@ -47,7 +47,7 @@ const ProgressAirPollution = React.forwardRef<
   >
     <ProgressPrimitive.Indicator
       className="h-2.5 w-2.5 flex-1 rounded-full bg-primary shadow-lg shadow-white ring-2 ring-white transition-all dark:ring-black"
-      style={{ marginLeft: `${value || 100}%` }}
+      style={{ marginLeft: `calc(${value || 0}% * 20 - 10%)` }}
     />
   </ProgressPrimitive.Root>
 ))
