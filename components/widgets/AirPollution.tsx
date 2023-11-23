@@ -75,6 +75,9 @@ export default function AirPollution({
           Chất lượng không khí
         </CardTitle>
       </CardHeader>
+      <p>
+        {(airQuality.main.aqi)}
+      </p>
       <CardContent className="my-auto">
         <Progress aria-label="Air pollution" value={airQuality.main.aqi} />
       </CardContent>
