@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card"
-import { Progress } from "../ui/progress"
+import { Progress, ProgressAirPollution } from "../ui/progress"
 import { AirQualityData } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { ClassNameValue } from "tailwind-merge"
@@ -81,7 +81,7 @@ export default function AirPollution({
         Nồng độ chất ô nhiễm tính bằng μg/m<sup>3</sup>
       </p>
       <CardContent className="my-auto">
-        <Progress aria-label="Air pollution" value={airQuality.main.aqi} />
+        <ProgressAirPollution aria-label="Air pollution" value={airQuality.main.aqi} />
       </CardContent>
       <CardFooter>
         <p>
