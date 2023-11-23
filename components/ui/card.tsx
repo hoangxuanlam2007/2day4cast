@@ -62,7 +62,7 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("font-semibold md:text-lg", className)}
+    className={cn("font-semibold text-lg md:text-lg", className)}
     {...props}
   />
 ))
@@ -75,7 +75,7 @@ const CardFooter = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mt-auto flex items-center pt-0 text-xs md:text-base",
+      "mt-auto flex items-center pt-0 text-sm md:text-sm",
       className
     )}
     {...props}

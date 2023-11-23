@@ -75,8 +75,10 @@ export default function AirPollution({
           Chất lượng không khí
         </CardTitle>
       </CardHeader>
-      <p>
+      <p className="mb-2">
         {(airQuality.main.aqi)}
+        <br></br>
+        Nồng độ chất ô nhiễm tính bằng μg/m<sup>3</sup>
       </p>
       <CardContent className="my-auto">
         <Progress aria-label="Air pollution" value={airQuality.main.aqi} />
