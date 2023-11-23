@@ -20,6 +20,12 @@ export default function RootLayout({
       <meta property="og:title" content="2day4cast" />
       <meta property="og:sitename" content="2day4cast" />
       <meta property="og:author" content="Hoàng Xuân Lâm" />
+      <meta property="og:url" content="https://2day4cast.vercel.app/"/>
+      <meta property="og:description" content="Hà Nội Web App dự báo thời tiết bao gồm đầy đủ thông tin về khí tượng học | Hand-crafted with ❤️ by Xuân Lâm"/>
+      <meta property="og:type" content="weather-app-next-js"/>
+      <meta name="apple-mobile-web-app-status-bar" content="#68B5E9" />
+      <link rel="apple-touch-icon" href="/favicon.ico" />
+      <link rel="manifest" href="/manifest.json" />
       <body
         className={`${inter.className}, container mx-auto flex min-h-screen flex-col px-[1rem] antialiased selection:bg-black selection:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black md:px-[2rem]`}
       >

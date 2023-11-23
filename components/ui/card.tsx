@@ -75,7 +75,7 @@ const CardFooter = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mt-auto flex items-center pt-0 text-xs md:text-sm",
+      "mt-auto flex items-center pt-0 text-xs md:text-base",
       className
     )}
     {...props}

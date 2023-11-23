@@ -108,6 +108,7 @@ export default function Map() {
           left: "0",
           zIndex: 0,
         }}
+        dragPan={true}
       >
         <Source
           key={MapCode}

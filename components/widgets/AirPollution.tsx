@@ -76,21 +76,21 @@ export default function AirPollution({
         </CardTitle>
       </CardHeader>
       <CardContent className="my-auto">
-        <Progress aria-label="Air pollution" value={airQuality.main.aqi * 10} />
+        <Progress aria-label="Air pollution" value={airQuality.main.aqi} />
       </CardContent>
       <CardFooter>
         <p>
-          {airQuality.main.aqi < 50
+          {airQuality.main.aqi === 1
             ? "Chất lượng không khí tốt."
-            : airQuality.main.aqi < 100
+            : airQuality.main.aqi === 2
             ? "Chất lượng không khí ở mức vừa phải."
-            : airQuality.main.aqi < 150
+            : airQuality.main.aqi === 3
             ? "Chất lượng không khí không tốt cho sức khỏe cho những người có tiền sử bệnh lý về đường hô hấp."
-            : airQuality.main.aqi < 200
+            : airQuality.main.aqi === 4
             ? "Chất lượng không khí không tốt."
-            : airQuality.main.aqi < 300
+            : airQuality.main.aqi === 5
             ? "Chất lượng không khí độc hại."
-            : "Chất lượng không khí nguy hiểm."}
+            : "Không có dữ liệu."}
         </p>
       </CardFooter>
     </Card>

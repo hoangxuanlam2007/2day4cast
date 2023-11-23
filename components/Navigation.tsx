@@ -2,7 +2,7 @@ import Link from "next/link"
 import { CommandDialogDemo } from "./CommandDialogDemo"
 import { ModeToggle } from "./ui/ModeToggle"
 import { Button } from "./ui/button"
-import { GitHubLogoIcon, SketchLogoIcon } from "@radix-ui/react-icons"
+import { GitHubLogoIcon, BackpackIcon } from "@radix-ui/react-icons"
 
 export default function Navigation() {
   return (
@@ -15,7 +15,7 @@ export default function Navigation() {
         <div
           aria-label="Premium_Mode"
           className="shrink-0"
-          title="Bạn đã kích hoạt tính năng Premium."
+          title="Bạn đang sử dụng tài khoản dành cho doanh nghiệp, có thể sử dụng và tạo nhiều API keys cùng lúc."
         >
           <Button variant={"secondary_nohover"} className="h-9"
             style={{
@@ -23,8 +23,8 @@ export default function Navigation() {
             }}
             tabIndex={-1}
           >
-            <SketchLogoIcon className="h-4 w-4 md:mr-1" />
-            <span className="hidden md:block">Đã kích hoạt Premium</span>
+            <BackpackIcon className="h-4 w-4 md:mr-1" />
+            <span className="hidden md:block">Phiên bản doanh nghiệp</span>
           </Button>
         </div>
 
