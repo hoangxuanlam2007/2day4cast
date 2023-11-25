@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://2day4cast.vercel.app/"><img src="https://cdn.discordapp.com/attachments/920946141271584821/1176882762578415757/favicon.ico?ex=65707c7c&is=655e077c&hm=58e879d02a4baa329338bcb3897ef22ba17680c009ef8e59a50ee8ac038d45b6&" alt="2day4cast" width="200"></a>
+  <a href="https://2day4cast.vercel.app/"><img src="https://media.discordapp.net/attachments/948593362791968778/1177988524486709288/image.png?ex=6574824e&is=65620d4e&hm=b16198d8822e70cdf0ba2df47285ebebb4cadbb20266fc907b9ec4f6ce071b89&=&format=webp&width=1131&height=676" alt="2day4cast" width="200"></a>
   <br>
   <span style="font-size: 40px">2day4cast</span>
   <br>
