@@ -5,6 +5,25 @@ export const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
+function customDateFormat(defaultFormat: string): string {
+  const weekdaysMap: { [key: string]: string } = {
+    'T2': 'Thứ 2',
+    'T3': 'Thứ 3',
+    'T4': 'Thứ 4',
+    'T5': 'Thứ 5',
+    'T6': 'Thứ 6',
+    'T7': 'Thứ 7',
+  };
+
+  const formattedWeekday = weekdaysMap[defaultFormat] || defaultFormat;
+
+  // Capitalize the first letter of each word
+  return formattedWeekday
+    .split(' ')
+    .map(word => capitalizeFirstLetter(word))
+    .join(' ');
+}
+
 export function convertToDate(
   timezone: number,
   dt: number,
@@ -23,6 +42,23 @@ export function convertToDate(
     .join(' ');
 
   return formattedWeekday;
+}
+
+export function convertToCustomDate(
+  timezone: number,
+  dt: number,
+  weekdayFormat: "short" | "long",
+): string {
+  const momentUtc = moment.unix(dt);
+  const momentLocal = momentUtc.utcOffset(timezone / 60);
+  momentLocal.locale('vi');
+
+  const formattedWeekday = momentLocal.format(weekdayFormat === 'short' ? 'ddd' : 'dddd');
+
+  // Use customDateFormatConverter to convert the formatted weekday
+  const customFormattedWeekday = customDateFormat(formattedWeekday);
+
+  return customFormattedWeekday;
 }
 
 export function formatSunTime(

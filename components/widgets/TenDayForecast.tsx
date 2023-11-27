@@ -1,6 +1,6 @@
 import { ForecastData, TenDayForecastData } from "@/lib/types"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
-import { convertToDate } from "@/lib/dateUtils"
+import { convertToDate, convertToCustomDate } from "@/lib/dateUtils"
 import { TemperatureRange } from "../ui/temperature-range"
 import IconComponent from "../ui/icon-component"
 import { Separator } from "../ui/separator"
@@ -109,36 +109,18 @@ export default function TenDayForecast({ data }: TenDayForecastProps) {
           {data.list.map((item: ForecastData, i) => (
             <div key={item.dt}>
               <div className="flex w-full flex-row items-center justify-between gap-2 last:mb-0">
-                <p className="min-w-[3rem] text-sm/[16px] font-bold">
+                <p className="min-w-[70px] font-semibold whitespace-nowrap">
                   {i === 0
                     ? "Hôm nay"
-                      : i === 1
-                        ? "Thứ bảy"
-                          : i === 2
-                            ? "Chủ nhật"
-                              : i === 3
-                                ? "Thứ hai"
-                                  : i === 4
-                                    ? "Thứ ba"
-                                      : i === 5
-                                          ? "Thứ tư"
-                                            : i === 6
-                                              ? "Thứ năm"
-                                                : i === 7
-                                                  ? "Thứ sáu"
-                                                    : i === 8
-                                                      ? "Thứ bảy"
-                                                        : i === 9
-                                                          ? "Chủ nhật"
-                    : convertToDate(data.city.timezone, item.dt, "short")}
+                    : convertToCustomDate(data.city.timezone, item.dt, "short")}
                 </p>
                 <IconComponent
                   weatherCode={item.weather[0].id}
-                  className=" h-8 w-8"
+                  className="h-8 w-9"
                 />
                 <div className="flex w-[60%] flex-row gap-2 overflow-hidden">
-                  <div className="flex w-full select-none flex-row items-center justify-between gap-2 pr-2 text-sm">
-                    <p className="flex w-[3rem] min-w-fit justify-end text-neutral-600 dark:text-neutral-400">
+                  <div className="flex w-full select-none flex-row items-center justify-between gap-2 pr-2 text-base">
+                    <p className="flex w-[3rem] justify-end text-neutral-600 dark:text-neutral-400">
                       {Math.floor(item.temp.min)}&deg;
                     </p>
                     <TemperatureRange
