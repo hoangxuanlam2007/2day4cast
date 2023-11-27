@@ -66,10 +66,10 @@ export default function WeatherWidgets({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{formatSunTime(city.sunset, city.timezone)}</p>
+          <p className="text-3xl">{formatSunTime(city.sunset, city.timezone)}</p>
         </CardContent>
         <CardFooter>
-          <p>Bình minh: {formatSunTime(city.sunrise, city.timezone)}</p>
+          <p className="text-base">Bình minh: {formatSunTime(city.sunrise, city.timezone)}</p>
         </CardFooter>
       </Card>
       <Card className="order-4 h-48 xl:order-3">
@@ -273,19 +273,19 @@ export default function WeatherWidgets({
                 <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
               </svg>
             </i>
-            Cảm giác như
+            Cảm nhận
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{Math.floor(data.main.feels_like)}&deg;</p>
+          <p className="text-3xl">{Math.floor(data.main.feels_like)}&deg;</p>
         </CardContent>
         <CardFooter>
           <p>
-            {data.main.feels_like < data.main.temp
-              ? "Lạnh hơn nhiệt độ thực tế."
-              : data.main.feels_like > data.main.temp
-              ? "Ấm/nóng hơn nhiệt độ thực tế."
-              : "Đúng với nhiệt độ thực tế."}
+            {data.main.feels_like > data.main.temp
+              ? "Bạn sẽ cảm thấy ấm hơn nhiệt độ thực tế."
+              : data.main.feels_like < data.main.temp
+              ? "Bạn sẽ cảm thấy lạnh hơn nhiệt độ thực tế."
+              : "Bạn sẽ cảm thấy với nhiệt độ thực tế."}
           </p>
         </CardFooter>
       </Card>
@@ -310,7 +310,7 @@ export default function WeatherWidgets({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{data.main.humidity}&deg;</p>
+          <p className="text-3xl">{data.main.humidity}&#37;</p>
         </CardContent>
         <CardFooter>
           <p>
@@ -347,7 +347,11 @@ export default function WeatherWidgets({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{data.visibility / 1000} km</p>
+        {data.visibility === 10000 ? (
+          <p className="text-3xl">&ge; {data.visibility / 1000} km</p>
+        ) : (
+          <p className="text-3xl">{data.visibility / 1000} km</p>
+        )}
         </CardContent>
         <CardFooter>
           <p>
@@ -381,7 +385,7 @@ export default function WeatherWidgets({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>{data.main.pressure} hPa</p>
+          <p className="text-3xl">{data.main.pressure} hPa</p>
         </CardContent>
         <CardFooter>
           <p>

@@ -3,8 +3,8 @@ import { Location } from "./types"
 export const DEFAULT_LOCATION: Location = {
   city: "Hà Nội",
   coord: {
-    lat: "21.0277644",
-    lon: "105.8341598",
+    lat: "21.1167",
+    lon: "105.8833",
   },
 }
 

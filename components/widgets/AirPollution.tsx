@@ -75,7 +75,7 @@ export default function AirPollution({
           Chất lượng không khí
         </CardTitle>
       </CardHeader>
-      <p className="mb-2">
+      <p className="mb-2 text-[18px] font-[600]">
         {(airQuality.main.aqi)}
         <br></br>
         Nồng độ chất ô nhiễm tính bằng μg/m<sup>3</sup>
