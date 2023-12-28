@@ -21,7 +21,7 @@ export default function CurrentWeather({ data, city }: CurrentWeatherProps) {
           <Clock initial={initial} timezone={city.timezone} />
         </div>
         <div className="text-md mt-2 flex font-bold">
-          <span>{city.name === 'Xom Pho' ? 'Hà Nội' : city.name}</span>
+          <span>{city.name === 'Hanoi' ? 'Hà Nội' : city.name}</span>
           <i
             style={{
               'marginLeft': '3px'
