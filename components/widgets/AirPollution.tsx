@@ -90,7 +90,7 @@ export default function AirPollution({
             : airQuality.main.aqi === 2
             ? "Chất lượng không khí ở mức vừa phải."
             : airQuality.main.aqi === 3
-            ? "Chất lượng không khí không tốt cho sức khỏe cho những người có tiền sử bệnh lý về đường hô hấp."
+            ? "Chất lượng không khí không tốt cho nhóm người nhạy cảm."
             : airQuality.main.aqi === 4
             ? "Chất lượng không khí không tốt."
             : airQuality.main.aqi === 5
