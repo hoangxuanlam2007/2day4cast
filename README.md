@@ -34,7 +34,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://media.discordapp.net/attachments/948593362791968778/1177988524486709288/image.png?ex=6574824e&is=65620d4e&hm=b16198d8822e70cdf0ba2df47285ebebb4cadbb20266fc907b9ec4f6ce071b89&=&format=webp&width=1131&height=676)
+![screenshot](https://media.discordapp.net/attachments/920946141271584821/1231818607881617459/image.png?ex=6638577a&is=6625e27a&hm=f9793f87efedbb94de247172aefa1b0ef9a1a7984fec404b7232c36919122e4e&=&format=webp&quality=lossless&width=1197&height=676)
 
 ## Features
 
