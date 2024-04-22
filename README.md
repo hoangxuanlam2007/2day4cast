@@ -111,13 +111,10 @@ This software uses the following open source packages:
 
 Give me a ⭐ [here](https://github.com/hoangxuanlam2007/2day4cast/issues)
 
-<p>Or</p>
+<p>Or donate via</p>
 
 ```
-8855060507 - MBBANK - HOANG XUAN LAM
-```
-```
-9955060507 - TECHCOMBANK - HOANG XUAN LAM
+1905 0170 2960 18 - TECHCOMBANK - HOANG XUAN LAM
 ```
 
 ## License
